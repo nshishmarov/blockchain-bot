@@ -11,9 +11,11 @@ import (
 // --- Type defifnitions
 
 type TgBotConfig struct {
-	TgToken  string `env:"TG_TOKEN"`
-	TgChanId int64 `env:"TG_CHAN_ID"`
-	DebugMode bool `env:"DEBUG_MODE, default=false"`
+	TgToken   string `env:"TG_TOKEN"`
+	TgChanId  int64  `env:"TG_CHAN_ID"`
+	DebugMode bool   `env:"DEBUG_MODE, default=false"`
+	FileName  string `env:"FILE_NAME, default=data.json"`
+	Path      string `env:"FILE_PATH, default=/tmp"`
 }
 
 type Config struct{}
