@@ -72,7 +72,7 @@ func main() {
 				log.Fatal(err)
 			}
 
-			msg := api.NewMessage(u.Message.Chat.ID, s)
+			msg := api.NewMessage(tgBotCfg.TgChanId, s)
 			msg.ParseMode = "" // Simply plain text.
 
 			_, err = bot.Send(msg)
